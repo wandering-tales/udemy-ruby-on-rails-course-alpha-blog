@@ -7,4 +7,6 @@ class User < ApplicationRecord
   before_save do |user|
     user.email = user.email.downcase
   end
+
+  has_secure_password
 end
