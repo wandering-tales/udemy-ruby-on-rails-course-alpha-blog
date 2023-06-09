@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-10 ">
-      <%= render 'errors' %>
+      <%= render 'shared/errors', model: @article, operation: operation %>
       <%= form_with model: @article, data: { turbo: false }, class: "bg-info p-3 mb-3 shadow rounded", local: true do |form| %>
 
         <div class="row mb-3">

@@ -1,8 +1,8 @@
-<% if @article.errors.any? %>
+<% if model.errors.any? %>
   <div class="alert alert-danger alert-dismissible fade show" role="alert">
-    <h4 class="alert-heading">Unable to update the article because of the following errors:</h4>
+    <h4 class="alert-heading">Unable to <%= operation %> the <%= model.model_name.name.humanize.downcase %> because of the following errors:</h4>
     <ul>
-      <% @article.errors.full_messages.each do |msg| %>
+      <% model.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
     </ul>
