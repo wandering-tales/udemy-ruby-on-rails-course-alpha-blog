@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: [:edit, :update]
+  before_action :load_user, only: [:show, :edit, :update]
+
+  def show
+    @articles = @user.articles
+  end
 
   def new
     @user = User.new
