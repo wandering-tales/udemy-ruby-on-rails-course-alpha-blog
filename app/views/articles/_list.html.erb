@@ -1,3 +1,5 @@
+<%= will_paginate @articles, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-md-center mt-4) %>
+
 <div class="container">
   <% @articles.each do |article| %>
     <div class="row justify-content-md-center">
@@ -21,3 +23,5 @@
     </div>
   <% end %>
 </div>
+
+<%= will_paginate @articles, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-md-center mb-4) %>
